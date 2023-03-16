@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  max-height: 100px;
+  box-sizing: border-box;
+  padding: 8px 0px;
+  background-color: #ffddd9;
+  color: #e74c3c;
+  border-radius: 5px;
+  margin: 16px 0;
+  text-align: center;
+}

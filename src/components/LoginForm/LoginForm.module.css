@@ -2,6 +2,7 @@
   height: 300px;
   width: 400px;
   padding: 16px;
+  box-sizing: border-box;
   margin: 32px auto;
   gap: 16px;
   box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
@@ -20,4 +21,10 @@
 .error {
   font-size: 16px;
   color: #e74c3c;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 350px;
+  }
 }

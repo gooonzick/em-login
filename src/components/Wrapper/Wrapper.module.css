@@ -1,0 +1,15 @@
+.inactive {
+  background-color: white;
+  color: #9fa628;
+}
+
+.button-container {
+  width: 350px;
+  margin: 8px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin-right: 8px;
+}

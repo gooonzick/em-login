@@ -1,10 +1,14 @@
-.container {
-  height: 300px;
+.root-container {
   width: 400px;
-  padding: 16px;
   box-sizing: border-box;
   margin: 32px auto;
-  gap: 16px;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
   box-shadow: 4px 4px 10px rgb(0 0 0 / 30%);
   border-radius: 8px;
 }
@@ -19,12 +23,28 @@
 }
 
 .error {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 200;
   color: #e74c3c;
 }
 
+.greeting {
+  text-align: center;
+  font-weight: 400;
+}
+
+.logo {
+  display: block;
+  width: 70%;
+  margin: 8px auto;
+  object-fit: cover;
+  border: 1px solid rgb(0 0 0 / 30%);
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 600px) {
-  .container {
+  .root-container {
     width: 350px;
+    margin: 0 auto;
   }
 }

@@ -1,11 +1,11 @@
 import { Component } from "solid-js";
-import styles from "./Error.module.css";
+import styles from "./ErrorShower.module.css";
 
 type Props = {
   errorText: string;
 };
 
-const Error: Component<Props> = (props) => {
+const ErrorShower: Component<Props> = (props) => {
   return (
     <div class={styles.container}>
       <span>{props.errorText}</span>
@@ -13,4 +13,4 @@ const Error: Component<Props> = (props) => {
   );
 };
 
-export default Error;
+export default ErrorShower;

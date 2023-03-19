@@ -3,6 +3,7 @@ import solidPlugin from "vite-plugin-solid";
 import devtools from "solid-devtools/vite";
 
 export default defineConfig({
+  base: "/em-login/",
   plugins: [
     devtools({
       /* additional options */

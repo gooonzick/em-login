@@ -1,17 +1,24 @@
 import { createForm } from "@felte/solid";
-import { Component, createEffect, createSignal, Show } from "solid-js";
+import { Component, createSignal, Show } from "solid-js";
 
 import { Button } from "../Button";
 import { ErrorShower } from "../ErrorShower";
 import { Input } from "../Input";
+
+import { useFormContext } from "../Wrapper/Wrapper";
+
 import { validtor } from "./helpers/validator";
 import logo from "./assets/em-logo.png";
-import { useFormContext } from "../Wrapper/Wrapper";
+
 import { FormValues } from "./types";
 
 import styles from "./LoginForm.module.css";
 
-export const LoginForm: Component = () => {
+type Props = {
+  onSuccess: (user: { email: string }) => void;
+};
+
+export const LoginForm: Component<Props> = (props) => {
   const [serverError, setServerError] = createSignal("");
 
   const isValidCase = useFormContext();
@@ -30,6 +37,7 @@ export const LoginForm: Component = () => {
         });
 
         await promise;
+        props.onSuccess(val);
       } catch (error) {
         if (typeof error === "string") {
           setServerError(error);
@@ -79,6 +87,7 @@ export const LoginForm: Component = () => {
         <Show when={isPasswordError()}>
           <span class={styles.error}>{errors().password}</span>
         </Show>
+
         <Button
           type="submit"
           isLoading={isLoading()}

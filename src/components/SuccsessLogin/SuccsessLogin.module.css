@@ -14,21 +14,6 @@
   border-radius: 8px;
 }
 
-.input {
-  margin-top: 16px;
-}
-
-.submit-button {
-  display: block;
-  margin: 8px auto;
-}
-
-.error {
-  font-size: 14px;
-  font-weight: 200;
-  color: #e74c3c;
-}
-
 .greeting {
   text-align: center;
   font-weight: 400;

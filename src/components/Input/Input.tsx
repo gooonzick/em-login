@@ -16,7 +16,6 @@ const Input: Component<Props> = (props) => {
     <div class={cls(styles.container, props.class)}>
       <label class={styles["input-box"]}>
         <input
-          type="text"
           class={cls(styles.input, { [styles.error]: props.hasError })}
           {...inputProps}
           placeholder=" "

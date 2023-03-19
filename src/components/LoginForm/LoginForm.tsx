@@ -72,6 +72,7 @@ export const LoginForm: Component<Props> = (props) => {
         <Input
           label="Email"
           class={styles.input}
+          type="email"
           name="email"
           hasError={isEmailError()}
         />
@@ -81,6 +82,7 @@ export const LoginForm: Component<Props> = (props) => {
         <Input
           label="Password"
           class={styles.input}
+          type="password"
           name="password"
           hasError={isPasswordError()}
         />
